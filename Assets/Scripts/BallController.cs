@@ -5,7 +5,14 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public Vector2 speed;
+    public Vector2 resetPosition;
     private Rigidbody2D body;
+
+    public void ResetBall()
+    {
+        transform.position = new Vector3(resetPosition.x, resetPosition.y, 2);
+    }
+
 
     // Start is called before the first frame update
     void Start()
